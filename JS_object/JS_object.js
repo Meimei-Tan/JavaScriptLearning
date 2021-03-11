@@ -1,6 +1,10 @@
 
 
 console.time("timer");
+
+/*
+* 字面量创建对象
+* */
 let obj = {
     name: "John",
     age: 18,
@@ -133,6 +137,8 @@ console.log(person_2);*/
 
 /*
 * 构造函数创建对象
+*   构造函数也能用return返回值  但如果是基本类型的返回值则被忽视，仍然返回this本身
+*                             如果返回值是对象，则返回给定的对象。
 * */
 
 function Person(name,age,height){
