@@ -1,0 +1,23 @@
+#employeeTable,
+#employeeTable tr,
+#employeeTable td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+body{
+    text-align: center;
+}
+
+#employeeAdd{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+
+
+.word{
+    text-align: center;
+}

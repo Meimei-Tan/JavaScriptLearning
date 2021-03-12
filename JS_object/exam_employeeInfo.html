@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EmployeeInfo</title>
+    <link rel="stylesheet" type="text/css" href="exam_employeeInfo.css"/>
+</head>
+<body>
+    <table id="employeeTable">
+        <tr>
+            <td>Name</td>
+            <td>E-mail</td>
+            <td>Salary</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>372069903@qq.com</td>
+            <td>18000</td>
+            <td><a href = "deleteEmp?id=001">Delete</a></td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>237263505@qq.com</td>
+            <td>10000</td>
+            <td><a href = "deleteEmp?id=002"/>Delete</a></td>
+        </tr>
+    </table>
+
+    <table id = "employeeAdd">
+        请输入员工信息：
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="empName" id="empName"/></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td><input type="text" name="email" id="email"/></td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td><input type="text" name="salary" id="salary"/></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <button id="addEmpButton" value="abc">Submit</button>
+            </td>
+        </tr>
+    </table>
+
+</body>
+<script type="text/javascript" src="exam_employeeInfo.js"></script>
+</html>

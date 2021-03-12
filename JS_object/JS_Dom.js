@@ -39,6 +39,42 @@ window.onload = function (){
 /*
 * DOM查询
 * getElementById();
+*
+*
+* //返回一个类数组,即使只找到一个结果
 * getElementsByTagName();
 * getElementsByName();
+*
+* document.body 保存body的引用
+* document.documentElement 保存html根标签的引用
+* document.all 代表页面中所有的元素 已弃用
+* all = document.getElementByTagName("*") 同上
+*
+*
+* 根据元素的class属性值查询一组元素节点对象
+*document.getElementsByClassName() IE9以上.
+*
+*
+* 以下方法IE8以下仍适用
+* document.querySelector(".box div"); 需要一个CSS选择器来查询一个元素节点对象，只会返回第一个查询到的元素
+* document.querySelectorAll(".box1);查找所有
+*  */
+
+/*
+* DOM增删改方法
+* document.createElement("div"); 用于创建一个元素节点对象，根据标签名创建元素节点对象；
+*         .createTextNode(); 创建一个文本节点对象
+* 父节点.insertBefore(newNode,oldNode);在父节点的指定子节点的前面添加一个兄弟节点
+*      .removeChild(newNode,oldNode); 移除子节点    eg: obj.parentNode.removeChild(obj);我删我自己。
+*      .replaceChild(); 替换子节点
 * */
+
+var button = document.createElement("input");
+button.type = "button";
+button.id = "btnx";
+button.value = "创建的按钮";
+var body = document.body;
+body.appendChild(button);
+
+
+

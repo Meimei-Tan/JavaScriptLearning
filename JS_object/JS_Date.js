@@ -13,7 +13,7 @@ console.log(date2)
 /*
 * 方法：
 * getDate(); 返回几号 1-31
-* getDaty(); 返回周几 0-6 0：周日
+* getDay(); 返回周几 0-6 0：周日
 * getMonth();月 0-11
 * getFullYear();
 * getTime();  返回格林威治1971开始的ms 计算机底层保存时间用时间戳
