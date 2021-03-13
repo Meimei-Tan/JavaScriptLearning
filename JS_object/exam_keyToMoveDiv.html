@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KeyToMoveDiv</title>
+    <style type="text/css">
+        #box1{
+            height:100px;
+            width: 100px;
+            background-color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body style="background-color: aquamarine">
+<div id = "box1"></div>
+</body>
+<script type="text/javascript">
+    var box1 = document.getElementById("box1");
+
+    document.onkeydown = function(event){
+        switch(event.key){
+            case "ArrowUp":
+                box1.style.top = box1.offsetTop - 100 + "px";
+                break;
+            case "ArrowDown":
+                box1.style.top = box1.offsetTop + 100 + "px";
+                break;
+            case "ArrowLeft":
+                box1.style.left = box1.offsetLeft - 100 + "px";
+                break;
+            case "ArrowRight":
+                box1.style.left = box1.offsetLeft + 100 + "px";
+                break;
+            default:
+                break;
+        }
+        return false;
+
+}
+
+</script>
+</html>

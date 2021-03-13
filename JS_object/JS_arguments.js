@@ -4,7 +4,7 @@
 *   -arguments用来封装传递给函数的实参
 *   -即使不用形参，也能同通过arguments来传递实参
 *       arguments[n]表示第几个实参（从0开始）
-*   -callee属性  表示指向函数本身的对象
+    *   -callee属性  表示指向函数本身的对象
 * */
 
 function fun(){
