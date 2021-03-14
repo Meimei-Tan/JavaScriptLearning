@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageAuto</title>
+</head>
+<body>
+<img src="./src/image/chenxi.jpg" id = "img"/>
+</body>
+    <script type="text/javascript">
+        var path = "./src/image/";
+        var imgNames = ["chenxi.jpg","hushuiluori.jpg","titian.jpg"];
+        var currentImg = 0;
+        var img = document.getElementById("img")
+        window.setInterval(function () {
+            //currentImg = (++currentImg + 3) % 3;  //这种能处理
+            currentImg++;
+            currentImg %= imgNames.length;
+            img.src = path + imgNames[currentImg];
+        },1000)
+    </script>
+</html>
