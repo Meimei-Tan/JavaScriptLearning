@@ -59,7 +59,7 @@ console.log(arrx);
         /*
         * param_1 开始的索引
         * param_2 要删除的数量
-        * param_3 to param_n 要添加的元素会从开始的索引位置开始插入
+        * param_3 to param_n 要添加的元素,会从开始的索引位置开始插入
         * */
 
         var delete_result = persons.splice(2,2,9,9);
@@ -134,19 +134,24 @@ var array = new Array(1,2,2,2,1,3,3,4,7,7,7,7,5,6,7,7,7,7);
 
             arrm[0] = array[0];
 
-            for (var i = 0;i < array.length;i++){
+            for (var i = 1;i < array.length;i++){
 
                 for(var j = 0;j < arrm.length;j++){
 
                     //找到相同的，就删除原数组中的重复项
-                    if(arrm[j] == array[i] && i != 0){
-                        array.splice(i,1);              //删除一项之后原本的第i项变成了原来的第i+1项，但在下一次循环之后i+1，此时i+1下标指实际指到原来i+2,故此要判断原来的第i+1项，需要i-1;现在的目的是检测原来的第i+1项，也就是现在的第i项
+                    if(arrm[j] == array[i]){
+                        array.splice(i,1);
+                        /*
+                        *    删除一项之后原本的第i项变成了原来的第i+1项，但在下一次循环之后i+1，
+                        * 此时i+1下标指实际指到原来i+2,故此要判断原来的第i+1项，需要i-1;现在的
+                        * 目的是检测原来的第i+1项，也就是现在的第i项.
+                        * */
                         i-=1;
                         break;
                     }
 
                     //找到最后一个还没有相同的,arrm就在尾部新增一个元素
-                    if(j == (arrm.length - 1) && i != 0){
+                    if(j == (arrm.length - 1)){
                         arrm[arrm.length] = array[i];
                         break;
                     }

@@ -22,6 +22,10 @@ button1.onclick = function () {
 * 元素.currentStyle.属性名；
 * getComputeStyle()
 * 二者获取到的都是只读，不能修改，修改只能用.style
+*
+* style 只能返回内联样式数据
+* currentStyle 返回元素所有最终使用的样式值
+*
 * */
 
 var button2 = document.getElementById("btn2");

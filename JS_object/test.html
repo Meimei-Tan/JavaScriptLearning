@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        * 测试空格字符串转String
+        * */
+        str = " ";
+        console.log(Boolean(str));  //true
+
+        /*
+        * 测试String参与非加运算时类型转换
+        * */
+        str = "1234aaa";
+        console.log(str - 4);   //NaN str被转换成为NaN,故在运算时，String不会自动调用parse方法。
+
+        /*
+        *  测试:null与0的关系
+        *   关系运算符中不等关系和相等关系是两个类别，null >= 0 和 null <= 0都为true，
+        * 但null==0为false，因为前者进行了隐式类型转换，而后者没有这样设计。
+        * */
+         console.log(null >= 0);
+         console.log(null <= 0);
+         console.log(null == 0);
+
+
+         /*
+         * 测试：对象方法是否也会被传arguments:
+         *  成员函数在被调用时候也会出入arguments
+         * */
+        function Obj(name,age){
+            console.log(arguments.length);
+            this.name = name;
+            this.age = age;
+            this.sayName = function(){
+                console.log(this.name);
+                console.log(arguments.length);
+            };
+        }
+        var obj = new Obj("Tom",18);
+        obj.sayName();
+
+        var obj2 = {
+            name:"John",
+            sayName:function (){
+                console.log(arguments.length);
+            }
+        }
+
+        obj2.sayName();
+    </script>
+</body>
+</html>

@@ -25,7 +25,14 @@ Person.prototype.sayName = function (){
 var person_1 = new Person("Tom",18,1.9);
 var person_2 = new Person("John",20,1.8);
 
+
+
+
 person_1.weight++; //相当于person_1.weight = Person.prototype.weight + 1;
+
+
+
+
 person_1.sayName();
 person_2.sayName();
 
